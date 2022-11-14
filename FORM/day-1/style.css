@@ -1,0 +1,16 @@
+main{
+    height: 80vh;
+    background-color: #85C1E9;
+    margin: 0 auto;
+
+
+
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.general{
+    background-color: white;
+}
