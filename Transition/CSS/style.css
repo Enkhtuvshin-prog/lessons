@@ -1,0 +1,56 @@
+.shadow{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 20% auto;
+    position: relative;
+}
+.ball{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    transition-delay: .5s;
+    transition-property: top, left;
+    transition-duration: 2s, 1s, 2s;
+    transition-timing-function: 1s;
+}
+
+.ball h2{
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    padding-top: 15px;
+}
+.ball-1{
+    background-color: blue;
+    z-index: 1;
+}
+.ball-2{
+    background-color: green;
+    z-index: 0;
+    transition-property: top, left, border-radius, background-color;
+    transition-duration: 2.5s, 2.5s, .5s, 2.5s;
+
+
+}
+.ball-3{
+    background-color: red;
+    z-index: -1;
+}
+.shadow:hover .ball-1{
+    top: 0;
+    left: 0;
+}
+.shadow:hover .ball-2{
+    top: 0;
+    left: 400px;
+    border-radius: 0;
+    background-color: orchid;
+}
+.shadow:hover .ball-3{
+    top: 400px;
+    left: 400px;
+}

@@ -10,14 +10,14 @@
 <body>
     <main>
         <div class="container">
-            <div class="general">
+            <div class="general col-2">
                 <h2>General Information</h2>
-                <div>
+                <div class="name row">
                     <input type="text" id="firstname" name="firstname" placeholder="Firstname">
                     <input type="text" id="lasttname" name="lasttname" placeholder="Lastname">
                 </div>
                 <div>
-                    <input type="text" id="email" name="email" placeholder="Email">
+                    <input type="text" id="email" name="email"  placeholder="Email">
                 </div>
                 <div>
                     <input type="date" name="birth-date" >
@@ -27,32 +27,47 @@
                 </div>
                 <select>
                     <option value=""> Position</option>
-                    <option value=""> Mongolia</option>
-                    <option value="">Japan</option>
-                    <option value="">China</option>
+                    <option value=""> </option>
+                    <option value=""></option>
+                    <option value=""></option>
                 </select>
             </div>
-            <div class="contact">
-                <h2>General Information</h2>
+            <div class="contact col-2">
+                <h2>Contact Details</h2>
                 <div>
-                    <input type="text" id="firstname" name="firstname" placeholder="Firstname">
-                    <input type="text" id="lasttname" name="lasttname" placeholder="Lastname">
+                    <input type="text"  name="Street" placeholder="Street">
                 </div>
                 <div>
-                    <input type="text" id="email" name="email" placeholder="Email">
+                    <input type="text"  name="Additional Information" placeholder="Addition Informatio">
                 </div>
                 <div>
-                    <input type="date" name="birth-date" >
+                    <input type="text" name="zipcode" placeholder="Zipcode" >
+                    <select name="plaece">
+                        <option>Place</option>
+                        <option>Mongolia</option>
+                        <option>American</option>
+                        <option>Korea</option>
+                    </select>
                 </div>
                 <div>
-                    <input type="text"  name="Company" placeholder="Company">
+                    <select>
+                        <option value=""> Country</option>
+                        <option value=""> Mongolia</option>
+                        <option value="">Japan</option>
+                        <option value="">China</option>
+                    </select>
                 </div>
-                <select>
-                    <option value=""> Position</option>
-                    <option value=""> Mongolia</option>
-                    <option value="">Japan</option>
-                    <option value="">China</option>
-                </select>
+                <div>
+                    <input type="text" name="code" placeholder="Code">
+                    <input type="text" name="phonenumber" placeholder="Phone Number">
+                </div>
+                <div>
+                    <input id="accept" type="checkbox" >
+                    <label>I do accept the Terms and Conditions of your site</label>
+                </div>
+                <div class="register">
+                    <input  type="submit" value="Register Badge" >
+                </div>
             </div>
         </div>
 

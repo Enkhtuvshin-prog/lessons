@@ -1,16 +1,60 @@
 main{
     height: 80vh;
     background-color: #85C1E9;
-    margin: 0 auto;
-
-
-
+    margin: 0;
 }
 .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 80px;
+    border-radius: 20px;
+    height: 60vh;
+    }
+.container .col-2{
+    padding: 20px;  
 }
+.container .col-2 input{
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid #9DA1A3;
+}
+
 .general{
     background-color: white;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
 }
+.general h2{
+       color: rgb(53, 53, 229);
+   }
+ h2{
+     font-size: 2rem;
+     font-weight: 600;
+    }
+    .contact{
+        background-color: rgb(49, 49, 229) ;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        color: white;
+    }
+    .contact input{
+        background: transparent;
+    }
+    select{
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #9DA1A3;
+    }
+    .register{
+        display: inline-block;
+        background-color: white;
+        border: 1px solid gray;
+        border-radius: 20px;
+    }
+    .contact input::placeholder {
+        color: #fff;
+    }
+  
