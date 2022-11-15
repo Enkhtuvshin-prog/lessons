@@ -1,5 +1,5 @@
 main{
-    height: 80vh;
+    height: 100vh;
     background-color: #85C1E9;
     margin: 0;
 }
@@ -8,21 +8,19 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     padding: 80px;
-    border-radius: 20px;
     height: 60vh;
     }
-.container .col-2{
-    padding: 20px;  
-}
-.container .col-2 input{
-    width: 80%;
+
+.container  input{
+    box-sizing: border-box;
+    width: 100%;
     padding: 10px;
     margin: 10px;
     border: none;
     border-bottom: 1px solid #9DA1A3;
 }
-
 .general{
+    padding: 20px 30px;
     background-color: white;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
@@ -30,11 +28,15 @@ main{
 .general h2{
        color: rgb(53, 53, 229);
    }
+.container .general select{
+    color: black;
+}
  h2{
      font-size: 2rem;
      font-weight: 600;
     }
     .contact{
+        padding: 20px;
         background-color: rgb(49, 49, 229) ;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -43,18 +45,35 @@ main{
     .contact input{
         background: transparent;
     }
-    select{
+    .row{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .container select{
+        margin: 10px;
+        width: 100%;
+        color: white;
+        padding: 7px;
         background: transparent;
         border: none;
         border-bottom: 1px solid #9DA1A3;
     }
-    .register{
+    .register button{
         display: inline-block;
+        padding: 15px;
+        margin-top: 20px;
         background-color: white;
         border: 1px solid gray;
-        border-radius: 20px;
+        border-radius: 40px;
     }
+.container .contact .checkbox input{
+    display: inline-block;
+    width: 10px;
+    margin: 10px 0;
+}
     .contact input::placeholder {
         color: #fff;
     }
+
   

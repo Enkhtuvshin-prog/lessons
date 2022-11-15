@@ -10,7 +10,7 @@
 <body>
     <main>
         <div class="container">
-            <div class="general col-2">
+            <div class="general">
                 <h2>General Information</h2>
                 <div class="name row">
                     <input type="text" id="firstname" name="firstname" placeholder="Firstname">
@@ -32,7 +32,7 @@
                     <option value=""></option>
                 </select>
             </div>
-            <div class="contact col-2">
+            <div class="contact">
                 <h2>Contact Details</h2>
                 <div>
                     <input type="text"  name="Street" placeholder="Street">
@@ -40,9 +40,9 @@
                 <div>
                     <input type="text"  name="Additional Information" placeholder="Addition Informatio">
                 </div>
-                <div>
+                <div class="zip row">
                     <input type="text" name="zipcode" placeholder="Zipcode" >
-                    <select name="plaece">
+                    <select name="plaece" id="place">
                         <option>Place</option>
                         <option>Mongolia</option>
                         <option>American</option>
@@ -57,16 +57,16 @@
                         <option value="">China</option>
                     </select>
                 </div>
-                <div>
+                <div class="code row">
                     <input type="text" name="code" placeholder="Code">
                     <input type="text" name="phonenumber" placeholder="Phone Number">
                 </div>
-                <div>
+                <div class="checkbox">
                     <input id="accept" type="checkbox" >
                     <label>I do accept the Terms and Conditions of your site</label>
                 </div>
                 <div class="register">
-                    <input  type="submit" value="Register Badge" >
+                    <button>Register Badge</button>
                 </div>
             </div>
         </div>
