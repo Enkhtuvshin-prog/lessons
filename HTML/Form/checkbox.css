@@ -1,0 +1,13 @@
+body{
+    background-color: black;
+}
+.container {
+    height: 25px;
+    width: 80px;
+    background-color: blue;
+    border-radius: 20px;
+}
+div input:checked {
+    
+    
+}
