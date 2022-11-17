@@ -4,7 +4,7 @@ body{
     height: 80vh;
 }
 .side-bar{
-    display: none;
+    /* display: none; */
     height: 80vh;
     background-color: #000;
     transition-property: all .5s;
@@ -17,7 +17,7 @@ ul{
 }
 .side-bar ul li{ 
     padding: 0;
-    margin: 10px;
+    margin: 10px 0;
     background-color: green;
     list-style: none;
     padding-top: 1.5rem ;
@@ -33,6 +33,9 @@ ul{
     font-size: 2rem;
     color:#000;
     width: 200px;
+}
+.side-bar ul li:hover {
     background-color: #fff;
 }
+
 

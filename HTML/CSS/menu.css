@@ -45,7 +45,7 @@
   }
   
   ul li a:hover {
-    color: blueviolet;
+    color: rgb(43, 226, 55);
   }
   
   input[type="checkbox"] {
@@ -69,7 +69,7 @@
   /* Mobile screen*/
   @media screen and (max-width: 480px) {
     body {
-      background-color: red;
+      background-color: black;
     }
   }
   /* ipad and tablet */
