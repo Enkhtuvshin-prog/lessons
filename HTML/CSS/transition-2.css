@@ -1,26 +1,22 @@
 body{
-    margin: 0;
-    width: 100px;
+    width: 150px;
     height: 80vh;
+    margin: -16px;
 }
 .side-bar{
-    /* display: none; */
+    margin-top: 0;
     height: 80vh;
     background-color: #000;
-    transition-property: all .5s;
 }
-.side-bar:hover{
-    width: 200px;
-}
+
 ul{
-    padding: 0;
+    padding: 10px 0;
 }
 .side-bar ul li{ 
-    padding: 0;
     margin: 10px 0;
-    background-color: green;
     list-style: none;
-    padding-top: 1.5rem ;
+    padding: 1.5rem 0 ;
+    background-color: green;
 }
 .side-bar ul li a{
     text-decoration: none;
