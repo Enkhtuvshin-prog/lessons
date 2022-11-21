@@ -60,3 +60,20 @@ body{
     border-radius: 0;
     background-color: rgb(237, 141, 106);
 }
+.box-5{
+    top: 25%;
+    left:25%;
+}
+.box-6{
+    top: 25%;
+    left:50%;
+}
+.box-7{
+    top: 50%;
+    left: 25%;
+}
+.box-8{
+    top: 50%;
+    left: 50%;
+}
+
