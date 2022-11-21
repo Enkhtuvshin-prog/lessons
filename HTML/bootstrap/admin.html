@@ -33,7 +33,7 @@
                         <li><a class="dropdown-item" href="#">Мэдээ</a></li>
                         <li><a class="dropdown-item" href="#">Сэтгэгдэл</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        <li><a class="dropdown-item" href="#">Шинэ мэдээ</a></li>
                       </ul>
             </li>
             <li  class="nav-item">
@@ -41,18 +41,67 @@
             </li>
           </ul>
 
-          <button class="btn btn-primary ms-auto">Гарах</button>
+          <button class="btn btn-light ms-auto">Гарах</button>
       </div> 
 
     </div>  
 </nav>
 <main>
-  <div class="container">
+  <div class="container ">
+    <div class="row m-4 text-center">
+      <div class="col">
+        <h1>Ангилал</h1>
+      </div>
+      <div class="col">
+         <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary bg-transparent text-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Шинэ</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Ангилал нэмэх</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-start">
+        <label >
+          <p>Нэр</p>
+          <input class="rounded-3 p-2 w-100 " type="text" name="angilal" placeholder="Ангиллын нэр">
+        </label>
+      </div>
+      <div class="modal-footer justify-content-start">
+        <button type="button" class="btn btn-danger bg-transparent text-danger" data-bs-dismiss="modal">Устгах</button>
+        <button type="button" class="btn btn-primary ms-auto">Хадгалах</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        <!-- <button class="btn btn-primary  m-auto bg-transparent text-primary" id="modal">Шинэ</button> -->
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-6 mx-auto">
-        <div class="form-control m-3 d-flex align-items-center">
-          <label>улс төр</label>
-          <button class="btn btn-light ms-auto"> засах</button>
+        <div class="form-control  p-2 d-flex align-items-center">
+          <label>Улс төр</label>
+          <button class="btn btn-light ms-auto "> Засах</button>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3 mb-3">
+      <div class="col-md-6 mx-auto">
+        <div class="form-control  p-2 d-flex align-items-center">
+          <label>Нийгэм</label>
+          <button class="btn btn-light ms-auto "> Засах</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="form-control  p-2 d-flex align-items-center">
+          <label>Спорт</label>
+          <button class="btn btn-light ms-auto "> Засах</button>
         </div>
       </div>
     </div>
