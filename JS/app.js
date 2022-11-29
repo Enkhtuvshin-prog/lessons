@@ -1,7 +1,7 @@
 console.log("Hello Word - 2");
 
 let ner = ("Tuvshin");
-let age = 25;
+let nas = 25;
 let job ;
 const tall = null;
 let formatted = true;
@@ -10,9 +10,9 @@ console.log('Уншихад амар');
 }
 //Comments can make code readable
 console.log(ner);
-console.log(age);
+console.log(nas);
 console.log(typeof(ner));
-console.log(typeof(age));
+console.log(typeof(nas));
 console.log(typeof(formatted));
 console.log(typeof(job));
 console.log(typeof(tall));
@@ -114,8 +114,3 @@ console.log(it +" "  + ", "+o+ "-"+o+", "+o+"-"+o);
 console.log(it +" "  + ", "+o+ "-"+o+", "+o+"-"+o);
 console.log(it +" "  + ", "+o+ "-"+o+", "+o+"-"+o);
 console.log(it);
-
-
-
-
-
