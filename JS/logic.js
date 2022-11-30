@@ -135,13 +135,27 @@ console.log(hb)
  else {
     console.log("no")
  }
+
  let o = 96, p = 108, z = 89;
  let aver;
  if(o >=89 ){
     aver = o;
- } else (o<=89) {
+ } else  if (o<=89) {
     aver = o + 3;
+ } else {
+    aver = 0;
  }
  console.log(aver);
+
+ //3 bodlogo
+ let myAge;
+let  yourAge = prompt("How old are you?");
+if (yourAge <= 30){
+    myAge = "Yong"
+} else{
+    myAge = "Old"
+}
+console.log(myAge);
+
  
   
