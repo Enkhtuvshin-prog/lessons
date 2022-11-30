@@ -39,6 +39,7 @@ console.log(typeof(tall));
  let v=583;
  let res = v%100;
  console.log((v-res)/100);
+ //14 bodlogo
 //15gb heden bit we?
 let g=15;
 const k=1024;

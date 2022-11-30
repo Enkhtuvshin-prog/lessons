@@ -156,6 +156,29 @@ if (yourAge <= 30){
     myAge = "Old"
 }
 console.log(myAge);
+//undur jil
+let year = prompt("Ta jilee oruulna uu?");
+if ( year%400===0 || year%4===0  ){
+    console.log("Mun");
+} else if (year%100 === 0 || !(year%4 === 0) )   {
+    console.log("bish")
+}
+//tsag
+ let hours = prompt("Ta tsagaa orulna uu?");
+ let ratePerHour = 5000;
+  let sumz = hours*ratePerHour;
+ console.log(sumz)
+
+ //3,7 urjver
+ let too = prompt("Ta toogoo oruulna uu?")
+ if (too/3 === 0 || too/7 === 0){
+    console.log(mun);
+ }else{
+    console.log(bish);
+ }
+// register number validation
+
+
 
  
   
