@@ -19,3 +19,4 @@ console.log(typeof(regUseg)=="string", Number(regToo))
 console.log(reg.charCodeAt(0));
 if(reg.charCodeAt(0)>=65&&reg.charCodeAt(0)<92){
 }
+//fieldset
