@@ -121,10 +121,13 @@ console.log( `sumAX hurtelh sondgoi toonuudin niilber: ${sumAZ}`);
 
 
 //12 bodlogo
-let u = 89776, huv = 10;
-let urwuuT = " ";
-while(u >= 1){
-    urwuuT = urwuuT  + u%10+ " ";
+let u = 89776;
+// let len = u.lenght
+let urwuuT = 0;
+let unit = 0;
+while(u!==0){
+    unit = u % 10;
+    urwuuT = urwuuT * 10   + unit;
     u = Math.floor(u/10);
 }
 console.log(urwuuT)
@@ -138,31 +141,57 @@ console.log(urwuuT)
 // }
 
 // 13 bodlogo
-const numberS = ["One", "Two", "three", "four", "five", "six", "seven", "eight", "nine"];
-let k = 0;
-let text = "";
-while (numberS[k]) {
-  text += numberS[k] + " ";
-  k++;
-}
-console.log(text)
- 
-// number digits
-function digits_count(n) {
-    var count = 0;
-    if (n >= 1) ++count;
-  
-    while (n / 10 >= 1) {
-      n /= 10;
-      ++count;
+const nmberS =[ "One", "two"]
+ let num =764321;
+ let p = 0, m =0, s=0;
+ while(num !== 0){
+    p = num%10;
+    s = s*10 + p
+    if(p<10){
+        m +=p;
     }
+    num = Math.floor(num/10);
+ }
+ console.log(s);
+ let ug = " ";
+
+ while(s !== 0){
+    p = s%10;
+    switch(p) {
+        case 0: {ug += "тэг " ; break}
+        case 1: {ug += " " +  " Нэг" ; break}
+        case 2: {ug += " " + "Хоёр " ; break}
+        case 3: {ug += " " + " Гурав" ; break}
+        case 4: {ug +=" " +  "Дөрөв" ; break}
+        case 5: {ug += " " + " Тав" ; break}
+        case 6: {ug += " " + "Зургаа "; break}
+        case 7: {ug += " " + " Долоо" ; break}
+        case 8: {ug += " " + " Найм" ; break}
+        case 9: {ug += " " + " Ес" ; break}
+    }
+    s = Math.floor(s/10);
+ }
+ console.log(ug);
+ 
+
+
+// number digits
+// function digits_count(n) {
+//     var count = 0;
+//     if (n >= 1) ++count;
   
-    return count;
-  }
+//     while (n / 10 >= 1) {
+//         tsiper
+//       n /= 10;
+//       ++count;
+//     }
   
-  console.log(digits_count(7543321));
+//     return count;
+//   }
   
-  console.log(digits_count(45798));
+//   console.log(digits_count(7543321));
+  
+//   console.log(digits_count(45798));
 
 // guess the number
 
@@ -171,3 +200,30 @@ while (i<10){
     console.log(i);
     i = i + 3;
 }
+// pyramid 
+// let rows = parseInt( prompt("Ta toogoo oruulna uu"))
+//  for (let z = 0; z<rows ; z++);{
+//     let output = " ";
+//     for(let d =0; d<rows-z; d++ ) output += ' ';
+//     for(let g =0; g<=z; g++ ) output += '*';
+//     console.log(output);
+    
+//  }
+// pyramid
+let b, d, j;
+for(b = 1; b<=10; b++){
+    let output =' ';
+    for(d=1; d<= (10 -b); d++){
+        output += ' ';
+    }
+            for (j = 1; j<=b; j++)
+            {
+               output =output + " " + ("*");
+            }
+            console.log(output)
+}
+
+// square
+
+let q;
+
