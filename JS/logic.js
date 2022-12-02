@@ -157,7 +157,7 @@ if (yourAge <= 30){
 }
 console.log(myAge);
 //undur jil
-let year = prompt("Ta jilee oruulna uu?");
+let year = prompt("Ta onoo oruulna uu?");
 if ( year%400===0 || year%4===0  ){
     console.log("Mun");
 } else if (year%100 === 0 || !(year%4 === 0) )   {
