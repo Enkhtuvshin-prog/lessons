@@ -9,19 +9,93 @@
 </head>
 <body>
     <div class="banner">
-        <div class="title">
+        <div class="banner-title">
             <h2>Social media хэрэглэгчдийн судалдгаа</h2>
             <p>Судалгаанд оролцсон таньд баярлалаа.</p>
         </div>
         <div class="content">
-            <p>Ерөнхий мэдээлэл</p>
             <form>
-                <label>Нэр</label><br>
-                <input type="text" name="name"><br>
-                <label>И-мэйл</label><br>
-                <input type="email" name="name"><br>
-                <label>Нас</label><br>
-                <input type="age" name="name">
+                <fieldset>
+                    <legend for="fname" >Ерөнхий мэдээлэл</legend>
+                    <div class="input-box">
+                        <label>Нэр</label><br>
+                        <input type="text" name="name"><br>
+                    </div>
+                    <div class="input-box">
+                        <label>И-мэйл</label><br>
+                        <input type="email" name="name"><br>
+                    </div>
+                    <div class="input-box">
+                        <label>Нас</label><br>
+                        <input type="age" name="name">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Social media</legend>
+                    <div class="input-box">
+                        <label for="time">Та өдөрт хэдэн цаг social media ашигладаг вэ?</label><br>
+                        <select name="time" id="time">
+                            <option value=" one"> 1-2 цаг</option>
+                            <option value=" two"> 2-4 цаг</option>
+                            <option value=" three"> 4-5 цаг</option>
+                            <option value=" four"> 6+ цаг</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <p>Та онлайнаар худалдан авалт хийх, дэлгүүр орж худалдан авалт хийхийн  альныг илүүд үзэх вэ?</p>
+                        <div>
+                            <input type="radio">
+                            <label >Онлайн худалдан авалт</label>
+                        </div>
+                        <div>
+                            <input type="radio">
+                            <label > Дэлгүүр орж  худалдан авалт хийх</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>Та  ямар social media platform ашигладаг вэ?</p>
+                        <div>
+                            <input type="checkbox">
+                            <label >Facebook</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label >Instagram</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label >Twitter</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label >Reddit</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label >Snapchat</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label >Quora</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label >Youtube</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label >Бусад</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <footer>
+                    <div class="feedback">
+                        <p>Санал Хүсэлт</p>
+                        <textarea name="message" id="" cols="80" rows="10"> Санал хүсэлтээ энд бичнэ үү.....</textarea>
+                    </div>
+                    <button type="button">Илгээх </button>
+                </footer>
             </form>
         </div>
     </div>
