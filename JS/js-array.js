@@ -127,13 +127,28 @@ for(let y = 0; y < x.length; y++){
    console.log(q);
 }
 
-let arr1 = [ [3, 45, 23, 78,34],
-             [4, 2, 34, 4, 12,1]];
+let arr1 =  [3, 45, 23, 78,34], 
+       arr2 = [4, 2, 34, 4, 12,1];
 let urjver = [];
 for(let e=0; e<arr1.length; e++){
-   for (let j = 0; j<arr1[e]; e++){
-      urjver = arr1[e][[j]]*
-      urjver.push(arr1[e][j])
+   urjver[e] = arr1[e]*arr2[e]
+} 
+console.log(urjver)
+
+// ugugdsun massiv
+let arrI = [4, 2, 34, 4, 1, 12, 1, 4];
+let arrC = [];
+let arrTemp = []
+for(let g=0; g < arrI.length; g++){
+   if(arrI[g] in arrTemp) {
+      arrC.push(arrI[g]);//4
+      console.log("davhardsan:", arrI[g]);
+      
+   }
+   else {
+      arrTemp.push(arrI[g]);//4,2,34
+
    }
 }
-console.log(urjver)
+console.log(arrTemp)
+// console.log(arrTemp);
