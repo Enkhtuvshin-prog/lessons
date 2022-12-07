@@ -120,9 +120,6 @@ console.log(oddN);
 let x = [1, 2, 3, 4, 5]
 let q = '';
 for(let y = 0; y < x.length; y++){
-//    for(let z=0; z<=y; z++){
-//    //    q = q + x[y] + " "
-// }
     q= q + ' ' + x[y]
    console.log(q);
 }
@@ -151,4 +148,5 @@ for(let g=0; g < arrI.length; g++){
    }
 }
 console.log(arrTemp)
-// console.log(arrTemp);
+
+//duplicate counter

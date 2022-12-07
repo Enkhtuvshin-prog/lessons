@@ -56,7 +56,7 @@ function text(x, y){
     }
     return -1;
 }
-let q = text( "l", ['h', 'e', 'l', 'l', 'o', 'h', 'l']) ;
+let q = text( "l", ['huhrfiuwgj', 'ejkvhtidbh', 'l', 'l', 'o', 'h', 'l']) ;
 console.log(q)
 
  // 4 bodlogo
@@ -132,21 +132,31 @@ console.log(x);
  console.log(b);
 
 // tegsh sondgoi too ologch
-function evenOdd(a,  even, odd){
+function evenOdd(a,  even){
     for(i=0; i<a.length; i++){
         if(a[i]%2 ===0){
              even = even + a[i]+ ' ';
-             
             }
-            else if (a[i]%2 !== 0){
-                odd = odd + a[i]+ " ";
+        }
+        return even;
+}
+
+let c = evenOdd([2, 5, 4, 6, 7, 11, 22],  []);
+console.log(c);
+
+// sondgoi too
+function Odd(a, odd){
+    for(i=0; i<a.length; i++){
+        if(a[i]%2 !==0){
+              odd = odd + a[i]+ " ";
             }
         }
         return odd;
-        return even;
 }
-let c = evenOdd([2, 5, 4, 6, 7, 11, 22], [], []);
-console.log(c);
+
+let o = Odd([2, 5, 4, 6, 7, 11, 22],  []);
+console.log(o);
+
 
 // array sorter
 // function filterM(a){
@@ -168,4 +178,35 @@ arr1.sort(s);
 console.log(arr1)
 
 // tip
+function gonchig(n, sum){
+    while(n>=5000 && n<=30000){
+        sum = n+ n*0.15;
+        return sum
+    } return sum = n +n*0.2
+}
+let n1 = parseInt( prompt("Ta toogoo oruulna uu?"));
+let j = gonchig(n1, 0);
+console.log(j);
+//nemegdel tulbur
+function nemegdl(i, sum){
+    while(i>=5000 && i<=30000){
+        sum +=  i*0.15;
+        return sum
+    } return sum += i*0.2
+}
+let n2 = parseInt( prompt("Ta toogoo oruulna uu?"));
+let f = nemegdl(n2, 0);
+console.log(f);
 
+// dundaj
+
+function aver(n, sum){
+    while(n>=5000 && n<=30000){
+        sum = (n+ n*0.15)/2;
+
+        return sum
+    } return sum = (n +n*0.2)/2
+}
+let n3 = parseInt( prompt("Ta toogoo oruulna uu?"));
+let m = aver(n3, 0);
+console.log(m);

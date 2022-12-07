@@ -292,4 +292,7 @@ let s = 8;
  }
  console.log( sumF);
 
- //random too oloh
+ //duplicate counter
+ let n = 187653;
+ let dup = 0;
+ 
