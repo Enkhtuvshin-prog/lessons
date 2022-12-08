@@ -1,48 +1,48 @@
 //methods
-function carS(carBrands){
-    let brands = [];
-    for(i=0; i<carBrands.length; i++){
-        if(carBrands[i][0].charAt(0)  == 'A'){
-        brands.push(carBrands[i])
-        }
-    }
-    return brands;
-}
+// function carS(carBrands){
+//     let brands = [];
+//     for(i=0; i<carBrands.length; i++){
+//         if(carBrands[i][0].charAt(0)  == 'A'){
+//         brands.push(carBrands[i])
+//         }
+//     }
+//     return brands;
+// }
 // let n = prompt(" Ta useg oruulna ")
-let x = carS([["Aston Martin Lagonda Ltd", "UK", 2016],
-    ["Audi", "Germany", 2016],
-    ["BMW", "Germany", 2016],
-    ["Chevrolet", "USA", 2016],
-    ["Dodge", "USA", 2016],
-    ["Ferrari", "Italy", 2016],
-    ["Honda", "Japan", 2016],
-    ["Jaguar", "UK", 2016],
-    ["Lamborghini", "Italy", 2016]
-    ]);
-    console.log(x);
-    // console.table(x);
-// 2 bodlogo
-    function car(carCountry){
-        let country = [];
-        for(i=0; i<carCountry.length; i++){
-            if(carCountry[i][1]  == 'USA'){
-            country.push(carCountry[i])
-            }
-        }
-        return country;
-    }
-    let y = car([["Aston Martin Lagonda Ltd", "UK", 2016],
-        ["Audi", "Germany", 2016],
-        ["BMW", "Germany", 2016],
-        ["Chevrolet", "USA", 2016],
-        ["Dodge", "USA", 2016],
-        ["Ferrari", "Italy", 2016],
-        ["Honda", "Japan", 2016],
-        ["Jaguar", "UK", 2016],
-        ["Lamborghini", "Italy", 2016]
-        ]);
-        console.log(y);
- // jishee       
+// let x = carS([["Aston Martin Lagonda Ltd", "UK", 2016],
+//     ["Audi", "Germany", 2016],
+//     ["BMW", "Germany", 2016],
+//     ["Chevrolet", "USA", 2016],
+//     ["Dodge", "USA", 2016],
+//     ["Ferrari", "Italy", 2016],
+//     ["Honda", "Japan", 2016],
+//     ["Jaguar", "UK", 2016],
+//     ["Lamborghini", "Italy", 2016]
+//     ]);
+//     console.log(x);
+//     // console.table(x);
+// // 2 bodlogo
+//     function car(carCountry){
+//         let country = [];
+//         for(i=0; i<carCountry.length; i++){
+//             if(carCountry[i][1]  == 'USA'){
+//             country.push(carCountry[i])
+//             }
+//         }
+//         return country;
+//     }
+//     let y = car([["Aston Martin Lagonda Ltd", "UK", 2016],
+//         ["Audi", "Germany", 2016],
+//         ["BMW", "Germany", 2016],
+//         ["Chevrolet", "USA", 2016],
+//         ["Dodge", "USA", 2016],
+//         ["Ferrari", "Italy", 2016],
+//         ["Honda", "Japan", 2016],
+//         ["Jaguar", "UK", 2016],
+//         ["Lamborghini", "Italy", 2016]
+//         ]);
+//         console.log(y);
+//  jishee       
         // let arrI = [4, 2, 34, 4, 1, 12, 1, 4];
         // let arrC = [];
         // let arrTemp = []
@@ -65,10 +65,30 @@ let x = carS([["Aston Martin Lagonda Ltd", "UK", 2016],
     let arrCountry = [];
     for(i=0; i<carBrands.length; i++){
         arrCountry.push(carBrands[i][1]);
-        if(carBrands[i][1] == arrCountry[i]){
-            console.log(arrCountry[i])
+        // if(carBrands[i][1] == arrCountry[i]){
+        //     console.log(arrCountry[i])
+        // }
+
+    } 
+    let uniqueCountry = [];
+    for(let i=0;i<arrCountry.length; i++){
+        if(!uniqueCountry.includes(arrCountry[i])){
+            uniqueCountry.push(arrCountry[i]);
         }
-    } return arrCountry;
+    }
+    console.log(uniqueCountry);
+    let cntArray=[];
+    for(let i=0;  i<uniqueCountry.length; i++){
+        counter = 0;
+        for(let j=0; j<arrCountry.length; j++){
+            if(uniqueCountry[i] == arrCountry[j]){
+                counter++;
+            }
+        }
+        cntArray.push(`${uniqueCountry[i]}:${counter}`);
+    }
+    return cntArray;
+    // return arrCountry;
   }
   let z = mashin([["Aston Martin Lagonda Ltd", "UK", 2016],
   ["Audi", "Germany", 2016],
@@ -80,7 +100,7 @@ let x = carS([["Aston Martin Lagonda Ltd", "UK", 2016],
   ["Jaguar", "UK", 2016],
   ["Lamborghini", "Italy", 2016]
   ]);
-  console.log(z)
+  console.log(z.join(", "))
 
 
  // shopping cart
@@ -116,3 +136,7 @@ let x = carS([["Aston Martin Lagonda Ltd", "UK", 2016],
 
 // console.log(r); 
 // 9 bodlogo
+const arr = [3, 1, 4, 1, 5, 9];
+const compareFn = (a, b) => (a - b);
+arr.sort(compareFn);
+console.log(arr);

@@ -172,10 +172,10 @@ console.log(o);
 // arr.sort(compareFn);
 // console.log(arr)
 
-let arr1 =[4, 32, 2, 5, 8, -10, 20, 1, 0, -20];
-let s = (a, b) => (a<b ? -1:0);
-arr1.sort(s);
-console.log(arr1)
+// let arr1 =[4, 32, 2, 5, 8, -10, 20, 1, 0, -20];
+// let s = (a, b) => (a<b ? -1:0);
+// arr1.sort(s);
+// console.log(arr1)
 
 // tip
 function gonchig(n, sum){
