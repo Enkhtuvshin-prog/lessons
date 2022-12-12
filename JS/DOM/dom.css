@@ -1,0 +1,21 @@
+body{
+    margin: 0 auto;
+    text-align: center;
+}
+
+button{
+    text-align: center;
+    margin-top: 250px;
+}
+.row{
+    display: flex;
+    height: 100px;
+    background-color: bisque;
+}
+.box{
+    width: calc(100%/4 -10px);
+    margin: 10px;
+    background-color: aqua;
+    border: 1px solid black; 
+    
+}

@@ -58,10 +58,11 @@ let saleTemp = [];
 let saleS = () =>{
     for(i=0; i<data.length; i++){
         mostSales.push(data[i].totalPrice);
-        const saleSort = ((a, b) =>b - a);
+    }
+    const saleSort = ((a, b) =>b - a);
         mostSales.sort(saleSort);
         saleTemp = mostSales.slice(0, 5);
-    }
+        console.log(saleTemp);
     let productNer = [];
     for(j=0; j<saleTemp.length; j++){
         for(n=0; n<data.length; n++){
@@ -70,7 +71,7 @@ let saleS = () =>{
             }
         }
     }
-    return productNer;
+    return productNer.slice(0,5);
 }
 let mostBor= saleS (data);
 console.log('ХИ зарагдсан бараа БО:', mostBor)
@@ -99,11 +100,11 @@ function  mostAmount(tooHemjee){
     let sumAmount = [];
     let arrAmount =[];
     for(i=0; i<tooHemjee.length; i++){
-        sumAmount.push(tooHemjee[i].amount);
-        const amountSort = ((a, b) => b-a);
-        sumAmount.sort(amountSort);
-        arrAmount = sumAmount.slice(0, 5)
+        sumAmount.push(tooHemjee[i].amount);   
     }
+    const amountSort = ((a, b) => b-a);
+    sumAmount.sort(amountSort);
+    arrAmount = sumAmount.slice(0, 5)
     console.log(arrAmount)
     let baraaNer = [];
     for(j=0; j<arrAmount.length; j++){
@@ -122,13 +123,14 @@ console.log('ХИ зарагдсан 5 бараа тоо хэмжээгээр: '
 let arr1 = [], salesPercent = [];
 let niitOrlogo = totalBor;
 arr1 = mostSales.slice(0, 10);
+console.log("baraa une:", arr1)
 console.log(arr1)
 let ezlehhuvi = (baraa) =>{
     let arrName = [];
     for(i=0; i<arr1.length; i++){
         for(j=0; j<baraa.length; j++){
             if(arr1[i] === baraa[j].totalPrice){
-                arrName.push(baraa[j].name)
+                arrName.push(baraa[j].productName);
             }
         }
     }
@@ -140,4 +142,10 @@ let ezlehhuvi = (baraa) =>{
     //   console.log(salesPercent)
     }
 let baraaNer = ezlehhuvi(data);
+
+
 console.log(baraaNer);
+
+const dataSort = ((a, b) => b.totalPrice-a.totalPrice);
+data.sort(dataSort);
+console.log("sortlogdson:", data)

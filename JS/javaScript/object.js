@@ -148,34 +148,34 @@ let students=[
 //         console.log(nas);
 //         console.log(uninas);
 //animals
-// let animals = [{
-//     type: 'dog',
-//     sound: 'woof',
-// },
-// { type: 'cow',
-// sound: 'moo',
-// },
-// {
-//     type: 'cat',
-//     sound: 'meow'
-// }
-// ];
-//  let a = (amitan) => {
-//     let duu = ' ';
-//     for(i=0; i< amitan.length; i++){
-//          if(amitan[i].type === n){
-//              duu = amitan[i].sound;
-//             }
-//             else{
-//                 duu = -1;
-//             }
-//         }
-//         return duu;
-//  }
+let animals = [{
+    type: 'dog',
+    sound: 'woof',
+},
+{ type: 'cow',
+sound: 'moo',
+},
+{
+    type: 'cat',
+    sound: 'meow'
+}
+];
+ let a = (amitan) => {
+    let duu = ' ';
+    for(i=0; i< amitan.length; i++){
+         if(amitan[i].type === n){
+             duu = amitan[i].sound;
+            }
+            else{
+                duu = -1;
+            }
+        }
+        return duu;
+ }
 //  let n = prompt("Ta amitni ner oruulna uu?");
-// // let n = 'cat'
-//  let b = a(animals);
-//  console.log(b);
+let n = 'cat'
+ let b = a(animals);
+ console.log(b);
 
  // Suragchid
  let suragch = [{
