@@ -348,8 +348,27 @@ const compareFn = (a, b) => (a > b ? -1 : 0);
 arr.sort(compareFn);
 console.log(arr)
 //max-age 3hun
-for(i=0; i<users.length; i++){
-    let arrT = (a, b) =>(a>b ? -1:0);
-        users[i].age.sort(arrT)
+function maxNas(maxAge){
+    let nasTemp = [];
+    for(i=0; i<maxAge.length; i++){
+        nasTemp.push(maxAge[i].age);
+    }
+    let compareNas = (a,b)=>(a>b ? -1:0);
+    nasTemp.sort(compareNas);
+    // return nasTemp
+    let arr1 = nasTemp.slice(0, 3);
+    // console.log(arr1);
+    // console.log(arr1.length);    
+    let arr2 = [];
+    for(j=0; j<arr1.length; j++){
+        for(n=0; n<maxAge.length; n++){
+            if(arr1[j] == maxAge[n].age){
+                arr2.push(maxAge[n].name)
+            }
+        }
+    }
+    return arr2;
 }
-    console.log(users)
+let nasMax = maxNas(users);
+console.log(nasMax);
+

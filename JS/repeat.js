@@ -71,27 +71,27 @@
 
 
 // 8 bodlogo
-let  f =6;
-let  factrl = 1;
-while (f>0){
-    factrl = factrl * f
-    f = f - 1
-}
-console.log(factrl)
+// let  f =6;
+// let  factrl = 1;
+// while (f>0){
+//     factrl = factrl * f
+//     f = f - 1
+// }
+// console.log(factrl)
 
 
-//9 bodlogo
-let t = 1234;
-let niilber = 0, huvaagch = 10;
-//  23
-// 12 bodlogo
-// 3%10 ==3
-// 23%10 ==3\
-while(t>=1) {//235
-    niilber += t%10//5 +3 + 2
-    t = Math.floor(t/10)//23
-}
-console.log(niilber);
+// //9 bodlogo
+// let t = 1234;
+// let niilber = 0, huvaagch = 10;
+// //  23
+// // 12 bodlogo
+// // 3%10 ==3
+// // 23%10 ==3\
+// while(t>=1) {//235
+//     niilber += t%10//5 +3 + 2
+//     t = Math.floor(t/10)//23
+// }
+// console.log(niilber);
 
 //10 bodlogo
 // let x =0;
@@ -201,11 +201,11 @@ console.log(niilber);
 
 // guess the number
 
-let i =0;
-while (i<10){
-    console.log(i);
-    i = i + 3;
-}
+// let i =0;
+// while (i<10){
+//     console.log(i);
+//     i = i + 3;
+// }
 // pyramid 
 // let rows = parseInt( prompt("Ta toogoo oruulna uu"))
 //  for (let z = 0; z<rows ; z++);{
@@ -216,83 +216,140 @@ while (i<10){
     
 //  }
 // pyramid
-let b, d, j;
-for(b = 1; b<=10; b++){
-    let output =' ';
-    for(d=1; d<= (10 -b); d++){
-        output += ' ';
-    }
-            for (j = 1; j<=b; j++)
-            {
-               output =output + " " + ("*");
-            }
-            console.log(output)
-}
+// let b, d, j;
+// for(b = 1; b<=10; b++){
+//     let output =' ';
+//     for(d=1; d<= (10 -b); d++){
+//         output += ' ';
+//     }
+//             for (j = 1; j<=b; j++)
+//             {
+//                output =output + " " + ("*");
+//             }
+//             console.log(output)
+// }
 
 // square
 
-let q = 5;
-let res = "";
-for(let t=1; t<=q; t ++ ){
-    for(let c =1; c <= q; c ++)
-    {
-        if(t === 1 || t === q || c ===1 || c===q){
-            res += "*" ;
-        }else{
-            res = res + " ";
-        }
-    }
-    res = res+ "\n"
-}
-console.log(res);
+// let q = 5;
+// let res = "";
+// for(let t=1; t<=q; t ++ ){
+//     for(let c =1; c <= q; c ++)
+//     {
+//         if(t === 1 || t === q || c ===1 || c===q){
+//             res += "*" ;
+//         }else{
+//             res = res + " ";
+//         }
+//     }
+//     res = res+ "\n"
+// }
+// console.log(res);
 
-// number digits
-let num = 7655999999999;
-let count = 0;
-while( num != 0){
-    num = Math.floor(num/10);
-    count ++
-}
- console.log(count);
+// // number digits
+// let num = 7655999999999;
+// let count = 0;
+// while( num != 0){
+//     num = Math.floor(num/10);
+//     count ++
+// }
+//  console.log(count);
 
-// ugiig urwuulj unshih
-let text = "fghjk" ;
-let l = text.length - 1;
-let revText = ' ';
-while(l >=0){
-    revText = revText + text[l];
-    l--;
-}
-console.log(revText);
+// // ugiig urwuulj unshih
+// let text = "fghjk" ;
+// let l = text.length - 1;
+// let revText = ' ';
+// while(l >=0){
+//     revText = revText + text[l];
+//     l--;
+// }
+// console.log(revText);
 
 // convert string
-let ug = "Hello WORld"
-let useg = " ";
-// console.log(ug.length)
-for (let q = 0; q < ug.length; q++){
-    let code = ug.charCodeAt(q);
-    if( code >= 65 && code <= 90 ){
-        useg += String.fromCharCode(code + 32);
-    } else if( code>= 96 && code<= 122 ){
-        useg += String.fromCharCode( code -32);
-    }
-    else {
-        useg += ug[q]
-    }
-}
-console.log(useg )
- // fibonacci
-let s = 8;
- let p = 0, a = 1, sumF;
- for (k = 0; k<=s; k++){
-    console.log(p);
-    sumF = p + a;
-    p=a;
-    a = sumF
- }
- console.log( sumF);
+// let ug = "Hello WORld"
+// let useg = " ";
+// // console.log(ug.length)
+// for (let q = 0; q < ug.length; q++){
+//     let code = ug.charCodeAt(q);
+//     if( code >= 65 && code <= 90 ){
+//         useg += String.fromCharCode(code + 32);
+//     } else if( code>= 96 && code<= 122 ){
+//         useg += String.fromCharCode( code -32);
+//     }
+//     else {
+//         useg += ug[q]
+//     }
+// }
+// console.log(useg )
+//  // fibonacci
+// let s = 8;
+//  let p = 0, a = 1, sumF;
+//  for (k = 0; k<=s; k++){
+//     console.log(p);
+//     sumF = p + a;
+//     p=a;
+//     a = sumF
+//  }
+//  console.log( sumF);
 
  //duplicate counter
- let n = 187653;
- let dup = 0;
+//  let n = 187653;
+//  let dup = 0;
  
+// Suragchdin dun
+let ners= ['Bat', 'OntsDumd'];
+let onoo = [67, 59], dun;
+    // onoo = 67;
+    for(i=0; i< ners.length; i++){
+        onoo = onoo[i]
+        if(onoo<60){
+            dun = 'Mash muu'
+        }
+        else if(onoo>=60 && onoo<70){
+            dun = 'Hangalttai'
+        }
+        else if(onoo>=70 && onoo<80){
+            dun = 'Dund'
+        }
+        else if(onoo>=80 && onoo<90){
+            dun = 'Sain'
+        }
+        else if(onoo>=90 && onoo<100){
+            dun = ' Mash Sain'
+        }
+    }
+console.log(ners[i] +"-" + onoo + "-" + dun);
+
+// Temtseen
+let a=96, b=108, c=89;
+let x=88, y=91, z=110;
+let aAver = (a+b+c)/2
+let bAver = (x+y+z)/2;
+let  winTeam;
+console.log(aAver);
+console.log(bAver);
+if(aAver>=100 || bAver>=100){
+    if(aAver>bAver){
+        winTeam ='aTeam turuulsen';
+    }else if(aAver===bAver){
+        winTeam = 'Onoo tentssen'
+    }
+    else{
+        winTeam = 'bTeam turuulsen';
+    }
+    console.log(`${winTeam}`)
+} else{
+    console.log('Ylagch bhgui')
+};
+
+//Easy
+let n = 89;
+let dunUseg = '';
+while(n<=100){
+    switch (n) {
+        case 90<=100: {dunUseg = "A" ; break}
+        case 80<=89: {dunUseg = "B"; break}
+        case 70<=79: {dunUseg = "c"; break}
+    }
+}
+console.log(dunUseg);
