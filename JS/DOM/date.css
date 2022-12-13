@@ -1,0 +1,29 @@
+body{
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 250px; */
+    padding: 20px;
+}
+.clock{
+    width: 180px;
+    height: 40px;
+    border: 2px solid black;
+    /* background-color: aliceblue; */
+}
+#timeMin{
+    text-align: center;
+    color: rgba(0, 0, 255, 0.633);
+}
+button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    color: red;
+    font-size: large;
+}

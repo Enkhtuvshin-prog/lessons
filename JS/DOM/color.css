@@ -1,0 +1,21 @@
+body{
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+.box{
+    border: 1px solid black;
+    margin: 10px;
+    width: 150px;
+}
+#myBtn{
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 200px;
+    background-color: orange;
+}

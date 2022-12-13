@@ -2,20 +2,20 @@ body{
     margin: 0 auto;
     text-align: center;
 }
-
-button{
-    text-align: center;
-    margin-top: 250px;
+.myBtn{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: orange;
 }
 .row{
     display: flex;
     height: 100px;
-    background-color: bisque;
-}
+    justify-content: center;
+    /* background-color: bisque; */
+    }
 .box{
-    width: calc(100%/4 -10px);
+    width: 150px;
     margin: 10px;
-    background-color: aqua;
+    /* background-color: aqua; */
     border: 1px solid black; 
-    
 }
