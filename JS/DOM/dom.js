@@ -1,7 +1,9 @@
 
-const myBtn2 = document.getElementsByClassName('myBtn')[2];
-const myBtn1 = document.getElementsByClassName('myBtn')[1];
-const myBtn = document.getElementsByClassName('myBtn')[0];
+// const myBtn2 = document.getElementsByClassName('myBtn')[2];
+// const myBtn1 = document.getElementsByClassName('myBtn')[1];
+// const myBtn = document.getElementsByClassName('myBtn');
+const myBtn = document.querySelectorAll('.myBtn');
+
 const color = ['red', 'blue', 'green'];
 let colorIndex = 0;
 const body = document.getElementsByTagName('body')[0]; 
@@ -36,6 +38,10 @@ const divs = document.getElementsByClassName('box')
         let blue =Math.floor(Math.random() * 256);
             return `rgb(${red}, ${green}, ${blue})` 
  };
- myBtn.addEventListener('click', change);
- myBtn1.addEventListener('click', change);
- myBtn2.addEventListener('click', change);
+//  myBtn.addEventListener('click', change);
+
+ for(i=0; i<myBtn.length; i++){
+     myBtn[i].addEventListener('click', change);
+ }
+//  myBtn1.addEventListener('click', change);
+//  myBtn2.addEventListener('click', change);

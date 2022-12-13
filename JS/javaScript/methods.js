@@ -229,11 +229,6 @@ console.log(tursunUdur);
  console.log(rdInfo);
 
  // palindromic ckecker
- const str = 12345;
-const words = str.split(' ,');
-console.log(words);
- let y =[ 'ter gtyg njiu jhf'] ;
- console.log(y.split(''))
 //  let b = y.split('');
 //  let c = (a)=>{
 //     let  c = [], d = [];
