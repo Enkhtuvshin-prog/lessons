@@ -303,6 +303,7 @@ let  e = (skill)=>{
             max = manyskill[i].length;
         }   
 }
+console.log(max);
     for(j=0; j<skill.length; j++){
         // console.log(skill[j].name);
     let ner = [ ];
