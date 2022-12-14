@@ -1,0 +1,57 @@
+body{
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 500px;
+}
+.container{
+    text-align: center;
+    border: 1px solid black;
+    height: 500px;
+    color: rgba(12, 12, 90, 0.782);
+}
+.first-section input{
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-bottom: 2px solid orange;
+    border-right: 2px solid orange;
+    background-color: antiquewhite;
+}
+p{
+    font-size: 1rem;
+}
+button{
+    padding: 10px;
+    border: none;
+    background-color: orange;
+    color: white;
+}
+h2{
+    border-bottom: 2px solid black;
+    width: 350px;
+    margin: 20px auto;
+}
+.todo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 350px;
+    padding: 5px;
+    margin: 10px auto;
+    background-color: rgb(235, 234, 234);
+    border:  1px solid orange;
+}
+/* input:focus{
+    outline: none ;
+} */
+.todo-list input{
+    border: none;
+    background-color: transparent;
+    color: black;
+    padding: 8px;
+    flex-basis: 60%;
+}
+.todo-list .icons{
+    margin-top: 5px;
+    flex-basis: 30%;
+}

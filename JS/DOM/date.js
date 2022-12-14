@@ -11,9 +11,9 @@ const digitalClock = () =>{
     millsecond = new Date(). getMilliseconds();
     second = new Date().getSeconds();
     minute = new Date().getMinutes();
-    // hours = new Date().getHours();
+    hours = new Date().getHours();
 
-    h1.textContent = ` ${minute}:${second}:${millsecond}`;
+    h1.textContent = ` ${ hours}:${minute}:${second}:${millsecond}`;
     };
 const clear = () =>{
     clearInterval(timer);
