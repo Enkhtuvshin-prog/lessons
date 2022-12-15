@@ -40,9 +40,9 @@ const cardItem = (text) =>{
     `<div class="todo-list">
             <input type="text" name="" id="task" readonly value="${text}">
             <div class="icons">
-            <button class="edit" onclick = "edit(this)" >  <i class="fa-sharp fa-solid fa-pen" style="color: black;"></i> </button>                
-            <button class="check" onclick = "checkBox(this)"  ><i class="fa-sharp fa-solid fa-check" style="color: green;"></i></button>
-            <button class="delete" onclick = "ustgah(this)" ><i class="fa-sharp fa-solid fa-trash" style="color: red;"></i></button>
+                <button class="edit" onclick = "editTask(this)" >  <i class="fa-sharp fa-solid fa-pen" style="color: black;"></i> </button>                
+                <button class="check" onclick = "checkBox(this)"  ><i class="fa-sharp fa-solid fa-check" style="color: green;"></i></button>
+                <button class="delete" onclick = "ustgah(this)" ><i class="fa-sharp fa-solid fa-trash" style="color: red;"></i></button>
             </div>
     </div>`;
     return item;
@@ -63,28 +63,43 @@ document.addEventListener('keyup',(e)=>{
 });
  
 //checked
-const checkBox =() =>{
-    let checked = check;
-    let red = 'red';
-    let green = 'green'
-    if(checked === "checked"){
-        checked.style.color = `${green}`
-    }else{
-        checked.style.color = `${red}`
-
+const checkBox =(e) =>{
+    // console.log(e.parentNode.parentNode.getElementsByTagName("input")[0].value);
+    let inp = e.parentNode.parentNode.getElementsByTagName("input")[0];
+    // console.log(e.children)
+    console.log(inp.classList.contains("line"));
+    if(inp.classList.contains("line")){
+        inp.classList.remove("line");
+        // e.children[0].classList.toggle('fa-check')
     }
-    return checked ;
+    else {
+        inp.classList.add("line");
+        // e.children[0].style.backgroundColor = 'green'
+    }
+};
+//edit
+const editTask = (e) =>{
+    // console.log(e.children[0].classList[2])
+    let inpEdit = e.parentNode.parentNode.children[0];
+    // console.log(inpEdit)
+    if(inpEdit.hasAttribute('readonly')){
+        inpEdit.removeAttribute('readonly')
+        e.children[0].classList.toggle('fa-save');
+    }else{
+            inpEdit.setAttribute('readonly','readonly');
 }
+}
+// const editTask = (e) =>{ 
+//         // console.log();  
+
+//         let input = e.parentNode.parentNode.children[0];
+//         e.children[0].classList.toggle("fa-pen");
+//         e.children[0].classList.toggle("fa-save");
 
 
-// const checked = document.createElement('div');
-// div.innerHTML = checkBox
-// const checkBox = ()=>{
-//     let span = document.createElement("SPAN");
-//     let txt =document.createTextNode("\u00D7")
-//     span.className = 'close';
-//     span.appendChild(txt);
+//         if(input.hasAttribute("readonly")){
+//             input.removeAttribute('readonly');
+//         }else {
+//             input.setAttribute('readonly','readonly');
+//         }
 // }
-
-
- 

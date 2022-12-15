@@ -67,3 +67,6 @@ input:focus{
     border-radius: 50%;
     padding: 5px;
 }
+.line {
+    text-decoration: line-through;
+}
