@@ -5,7 +5,7 @@ body{
 }
 .container{
     text-align: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 500px;
     color: rgba(12, 12, 90, 0.782);
 }
@@ -20,12 +20,13 @@ body{
 p{
     font-size: 1rem;
 }
-button{
+#add-btn{
     padding: 10px;
     border: none;
     background-color: orange;
     color: white;
 }
+
 h2{
     border-bottom: 2px solid black;
     width: 350px;
@@ -41,9 +42,9 @@ h2{
     background-color: rgb(235, 234, 234);
     border:  1px solid orange;
 }
-/* input:focus{
+input:focus{
     outline: none ;
-} */
+}
 .todo-list input{
     border: none;
     background-color: transparent;
@@ -54,4 +55,15 @@ h2{
 .todo-list .icons{
     margin-top: 5px;
     flex-basis: 30%;
+}
+.icons button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+.check:hover{
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
 }
