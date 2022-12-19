@@ -60,13 +60,12 @@ input:focus{
     border: none;
     background-color: transparent;
     cursor: pointer;
-    
 }
-.check:hover{
+/* .check:hover{
     background-color: white;
     border-radius: 50%;
     padding: 5px;
-}
+} */
 .line {
     text-decoration: line-through;
 }

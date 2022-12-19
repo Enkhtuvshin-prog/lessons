@@ -33,8 +33,6 @@
     z-index: 0;
     transition-property: top, left, border-radius, background-color;
     transition-duration: 2.5s, 2.5s, .5s, 2.5s;
-
-
 }
 .ball-3{
     background-color: red;

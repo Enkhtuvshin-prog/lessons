@@ -1,0 +1,29 @@
+body{
+    margin:  0 auto;
+    box-sizing: border-box;
+}
+.container{
+    width: 600px;
+    height: 600px;
+    border: 4px  solid green;
+    text-align: center;
+    margin: 200px;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.row img{
+    width: calc(100%/3);
+    height: 200px;
+    cursor: pointer;
+    transform: translate(-50% -50%);
+    transition-property: top, left;
+    transition-duration: 2s, 2s, 2s, 2s;
+    filter: grayscale(100%);
+}
+.row img:hover{
+    filter: opacity(100%);
+}

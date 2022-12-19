@@ -21,20 +21,42 @@ const  addlist = () =>{
     // let inp = grouptodo.children[index].children[0];
     let inp = grouptodo.children[index];
     // console.log(inp)
-    inp.style.backgroundColor ='green'
+    if(inp.classList.contains('line')){
+        inp.classList.remove('line');
+        inp.style.backgroundColor =' rgb(235, 234, 234)'
+
+    }else{
+        inp.classList.add('line')
+        inp.style.backgroundColor ='#F0B27A '
+    }
   }
 
-  const editTask =(index) =>{
-        let inpEdit = grouptodo.children[index].children[0];
+//   const editTask =(index) =>{
+//         let inpEdit = grouptodo.children[index].children[0];
+//         // console.log(inpEdit)
+//         if(inpEdit.hasAttribute('readonly')){
+//             inpEdit.removeAttribute('readonly'); 
+//             inpEdit.classList.add('fa-save')       
+//         }else{
+//             inpEdit.setAttribute('readonly')
+//             inpEdit.classList.add('fa-pen')       
+//             ;
+//         }
+
+//   }
+const editTask= (index) =>{
+    let inp = grouptodo.children[index].children[1].children[0].children[0];
+    // console.log(inp)
+            inp.classList.toggle("fa-pen");
+        inp.classList.toggle("fa-save");
+                let inpEdit = grouptodo.children[index].children[0];
         // console.log(inpEdit)
         if(inpEdit.hasAttribute('readonly')){
-            inpEdit.removeAttribute('readonly');
-            
+            inpEdit.removeAttribute('readonly'); 
         }else{
-            inpEdit.setAttribute('readonly')
+            inpEdit.setAttribute('readonly', 'readonly')   ;
         }
-
-  }
+}
 
 const taskAdd = () =>{
     grouptodo.innerHTML = '';
@@ -44,7 +66,7 @@ const taskAdd = () =>{
                 <input type="text" name="" id="task" readonly value="${allTask[i]}">
                 <div class="icons">
                     <button class="edit" onclick = "editTask(${i})" >  <i class="fa-sharp fa-solid fa-pen" style="color: black;"></i> </button>                
-                    <button class="check" onclick = "checkBox(${i})"  ><i class="fa-sharp fa-solid fa-check" style="color: blue;"></i></button>
+                    <button class="check" onclick = "checkBox(${i})"  ><i class="fa-sharp fa-solid fa-check" style="color: green;"></i></button>
                     <button class="delete" onclick = "deleteTodo(${i})" ><i class="fa-sharp fa-solid fa-trash" style="color: red;"></i></button>
                 </div>
         </div>`;
