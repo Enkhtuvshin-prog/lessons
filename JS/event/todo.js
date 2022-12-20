@@ -1,20 +1,25 @@
 const addBtn =  document.getElementById('add-btn')
  const taskName = document.getElementById('taskName');
  let grouptodo = document.getElementById("groupTodo");
-
+ let select = document.getElementById('priority')
+console.log(select);
 const allTask =[];
 const  addlist = () =>{
     let text = taskName.value;
-    allTask.push(text);
+    let pr = select.value;
+    const newTask = {
+        name: text,
+        status: false,
+        priority:pr
+    }
+    allTask.push(newTask);
     taskAdd();
-
-}
  addBtn.addEventListener('click', addlist)
  const deleteTodo = (index) => {
     // console.log("II", index);
     allTask.splice(index, 1);
     taskAdd();
-  };
+}};
    
   const checkBox =(index) =>{
     
@@ -61,8 +66,9 @@ const editTask= (index) =>{
 const taskAdd = () =>{
     grouptodo.innerHTML = '';
     for(i=0; i <allTask.length; i++){
+        const check = allTask[i].status ? "line" : "";
         const item = 
-        `<div class="todo-list">
+        `<div class="todo-list ${allTask[i].priority} ">
                 <input type="text" name="" id="task" readonly value="${allTask[i]}">
                 <div class="icons">
                     <button class="edit" onclick = "editTask(${i})" >  <i class="fa-sharp fa-solid fa-pen" style="color: black;"></i> </button>                
