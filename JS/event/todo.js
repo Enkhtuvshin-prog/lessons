@@ -6,6 +6,7 @@ console.log(select);
 const allTask =[];
 const  addlist = () =>{
     let text = taskName.value;
+    console.log(text);
     let pr = select.value;
     const newTask = {
         name: text,
@@ -13,28 +14,28 @@ const  addlist = () =>{
         priority:pr
     }
     allTask.push(newTask);
-    taskAdd();
- addBtn.addEventListener('click', addlist)
+    taskAdd()
+};
+  
+  addBtn.addEventListener('click', addlist)
+//   select.addEventListener("change", changed);
  const deleteTodo = (index) => {
     // console.log("II", index);
     allTask.splice(index, 1);
     taskAdd();
-}};
+};
    
-  const checkBox =(index) =>{
-    
-    // let inp = grouptodo.children[index].children[0];
-    let inp = grouptodo.children[index];
-    // console.log(inp)
-    if(inp.classList.contains('line')){
-        inp.classList.remove('line');
-        inp.style.backgroundColor =' rgb(235, 234, 234)'
+//   const checkBox =(index) =>{ 
+//     let inp = grouptodo.children[index];
+//     if(inp.classList.contains('line')){
+//         inp.classList.remove('line');
+//         inp.style.backgroundColor =' rgb(235, 234, 234)'
 
-    }else{
-        inp.classList.add('line')
-        inp.style.backgroundColor ='#F0B27A '
-    }
-  }
+//     }else{
+//         inp.classList.add('line')
+//         inp.style.backgroundColor ='#F0B27A '
+//     }
+//   }
 
 //   const editTask =(index) =>{
 //         let inpEdit = grouptodo.children[index].children[0];
@@ -63,13 +64,17 @@ const editTask= (index) =>{
         }
 }
 
+const checkBox = (index) => {
+    allTask[index].status = !allTask[index].status;
+    taskAdd();
+  };
 const taskAdd = () =>{
     grouptodo.innerHTML = '';
     for(i=0; i <allTask.length; i++){
-        const check = allTask[i].status ? "line" : "";
+        const line = allTask[i].status ? "line" : "";
         const item = 
         `<div class="todo-list ${allTask[i].priority} ">
-                <input type="text" name="" id="task" readonly value="${allTask[i]}">
+                <input type="text" class="${line}" id="task" readonly value="${allTask[i].name}">
                 <div class="icons">
                     <button class="edit" onclick = "editTask(${i})" >  <i class="fa-sharp fa-solid fa-pen" style="color: black;"></i> </button>                
                     <button class="check" onclick = "checkBox(${i})"  ><i class="fa-sharp fa-solid fa-check" style="color: green;"></i></button>

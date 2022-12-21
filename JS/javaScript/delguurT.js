@@ -148,4 +148,4 @@ console.log(baraaNer);
 
 const dataSort = ((a, b) => b.totalPrice-a.totalPrice);
 data.sort(dataSort);
-console.log("sortlogdson:", data)
+console.log("sortlogdson:", data);

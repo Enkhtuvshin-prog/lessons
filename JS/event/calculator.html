@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./calculator.css">
+</head>
+<body>
+    <div class="container">
+        <form id="calculator">
+            <input type="text" id="calc">
+            <div class="row">
+                <input type="button" name="ac" class="bg-color" onclick="clr()"  value="AC">
+                <input type="button" name="ac" class="bg-color" value="+/-">
+                <input type="button" name="ac" class="bg-color"value="%">
+                <input type="button" name="ac" class="bg-orange" value="/">
+            </div>
+            <div class="row">
+                <input type="button" name="ac" class="bg-gray" onclick="dis(7)" onkeydown="dataNumber(event)" value="7">
+                <input type="button" name="ac" class="bg-gray" onclick="dis(8)" onkeydown="dataNumber(event)"  value="8">
+                <input type="button" name="ac" class="bg-gray" onclick="dis(9)" onkeydown="dataNumber(event)" value="9">
+                <input type="button" name="ac" class="bg-orange" onclick="dis('*')" onkeydown="dataNumber(event)" value="*">
+            </div>
+            <div class="row">
+                <input type="button" name="ac" class="bg-gray" onclick="dis(4)" onkeydown="dataNumber(event)" value="4">
+                <input type="button" name="ac" class="bg-gray" onclick="dis(5)" onkeydown="dataNumber(event)" value="5">
+                <input type="button" name="ac" class="bg-gray" onclick="dis(6)" onkeydown="dataNumber(event)" value="6">
+                <input type="button" name="ac" class="bg-orange" onclick="dis('-')" onkeydown="dataNumber(event)"  value="-">
+            </div>
+            <div class="row">
+                <input type="button" name="ac" class="bg-gray" onclick="dis(1)" onkeydown="dataNumber(event)" value="1">
+                <input type="button" name="ac" class="bg-gray" onclick="dis(2)" onkeydown="dataNumber(event)" value="2">
+                <input type="button" name="ac" class="bg-gray" onclick="dis(3)" onkeydown="dataNumber(event)" value="3">
+                <input type="button" name="ac" class="bg-orange" onclick="dis('+')" onkeydown="dataNumber(event)" value="+">
+            </div>
+            <div class="row">
+                <input type="button" name="ac" id="double"  onclick="dis(0)" onkeydown="dataNumber(event)"value="0">
+                <input type="button" name="ac" class="bg-gray" onclick="dis('.')" onkeydown="dataNumber(event)" value=".">
+                <input type="button" name="ac" class="bg-orange"  onclick="solve()" value="=">
+            </div>
+        </form>
+    </div>
+
+    <script src="./calculator.js"></script>
+</body>
+</html>

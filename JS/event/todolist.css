@@ -69,3 +69,18 @@ input:focus{
 .line {
     text-decoration: line-through;
 }
+.hight{
+    border: 1px solid red;
+}
+.medium{
+    border: 1px solid orange;
+}
+.low{
+    border: 1px solid green;
+}
+select{
+    background-color: orange;
+    padding: 8px;
+    border: 2px solid rgb(214, 176, 69);
+    color: white;
+}
