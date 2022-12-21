@@ -18,7 +18,7 @@ body{
     border-radius: 10px;
     border: none;
 }
-.row input{
+.calc button{
     width: calc(100%/4 - 20px);
     height: 50px;
     border-radius: 50%;
@@ -27,23 +27,21 @@ body{
     border: none;
     color: white;
     cursor: pointer;
+    font-size: 2rem;
+    font-weight: 500;
 }
 #double{
     width: 150px ;
     border-radius: 30px;
     background-color: rgb(35, 34, 34);
 }
-.bg-orange{
+.operator{
     background-color: orange;
 }
-.bg-gray{
+.numbers{
     background-color: rgb(35, 34, 34);
 }
 .bg-color{
     color: black;
     background-color: rgb(144, 136, 136);
-}
-input[type="button"]{
-    font-size: 2rem;
-    font-weight: 600;
 }
