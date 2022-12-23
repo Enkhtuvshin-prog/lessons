@@ -48,4 +48,3 @@ function clr() {
 //     a: 3,
 //     b: 4
 // }
-// math.evaluate('a * b', scope)
