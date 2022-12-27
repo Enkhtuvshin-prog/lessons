@@ -26,48 +26,28 @@
       <div class="buttons me-3">
         <button class=" btn navbar-toggler p-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span><i class="fa-solid fa-cart-shopping"></i></span>
-          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-light border border-danger rounded-circle">
+          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-light border border-danger rounded-circle cartCounter">
             <span class="visually-hidden">New alerts</span>
         </button>
 
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Сагс</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"  ></button>
               </div>
-              <div class="offcanvas-body">
-                <div class="card mb-3" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="./img/iphone9 1.png" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">Card <title></title></h5>
-                        <h3>$549</h3>
-                        <div class="counter">
-                          <button class="btn btn-light">-</button>
-                          <span class="m-3">0</span>
-                          <button class="btn btn-light">+</button>
-                        </div>
-                        <hr>
-                        <div class=" mt-2 d-flex justify-content-between">
-                          <p>Total price</p>
-                          <span>$</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="cartList">
+                
               </div>
-              <hr>
+              
+              <!-- <hr>
               <div class="footer">
                 <div class="total-price m-3 d-flex justify-content-between">
                   <p>Total price</p>
                   <h3>$</h3>
                 </div>
-              </div>
+              </div> -->
             </div>
+
 
         <button class="btn btn-outline-primary" >Sign in</button>
         <!-- <button class="btn btn-outline-primary" >My cart</button> -->
