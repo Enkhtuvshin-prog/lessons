@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
@@ -18,27 +19,68 @@
       </div>
       <form class="d-flex bg-secondary-subtle rounded-2 w-50" role="search ">
         <span class="input-group-text border-0 bg-transparent" id="basic-addon1">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search " viewBox="0 0 16 16">
-<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-</svg>
+          <i class="fa-solid fa-magnifying-glass"></i>
         </span>
         <input class="form-control me-2 border-0 bg-transparent" type="search" placeholder="Search" aria-label="Search">
-        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
       </form>
-      <div class="buttons">
+      <div class="buttons me-3">
+        <button class=" btn navbar-toggler p-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span><i class="fa-solid fa-cart-shopping"></i></span>
+          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-light border border-danger rounded-circle">
+            <span class="visually-hidden">New alerts</span>
+        </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Сагс</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="./img/iphone9 1.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Card <title></title></h5>
+                        <h3>$549</h3>
+                        <div class="counter">
+                          <button class="btn btn-light">-</button>
+                          <span class="m-3">0</span>
+                          <button class="btn btn-light">+</button>
+                        </div>
+                        <hr>
+                        <div class=" mt-2 d-flex justify-content-between">
+                          <p>Total price</p>
+                          <span>$</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="footer">
+                <div class="total-price m-3 d-flex justify-content-between">
+                  <p>Total price</p>
+                  <h3>$</h3>
+                </div>
+              </div>
+            </div>
+
         <button class="btn btn-outline-primary" >Sign in</button>
-        <button class="btn btn-outline-primary" >My cart</button>
+        <!-- <button class="btn btn-outline-primary" >My cart</button> -->
       </div>
     </div>
   </nav>
+
   <div class="container">
     <div class="row  g-4 m-3 productList">
     </div>
   </div>
 
   <script src="./product.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 
 </body>
 </html>
