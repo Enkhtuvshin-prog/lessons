@@ -2,8 +2,12 @@ console.log('product');
 const productList = document.querySelector('.productList');
 const cartList = document.querySelector('.cartList');
 const counter = document.querySelector('.cartCounter');
+const categorys =document.getElementById('categorys');
+const cartPrice = document.querySelector('.cartPrice');
+console.log(cartPrice);
 let allProducts = [];
 let cartProduct = [];
+let allCategorys = [];
 
 
 const displayProduct = () => {
@@ -33,7 +37,7 @@ const displayProduct = () => {
             
           </div>
           <div class="col ms-auto">
-            <button class="btn btn-outline-primary" onclick="cart(${idx})" >
+            <button class="btn btn-outline-primary" onclick="cart(${product.id})" >
              Add cart
             </button>
           </div>
@@ -70,30 +74,26 @@ const displayCart = () => {
                     <div class="col-md-4">
                       <img src="${product.thumbnail}" alt="..." style="max-width: 80px; height: 150px" >
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                       <div class="card-body">
                         <h5 class="card-title">${product.title} <title></title></h5>
                         <h3>$${product.price}</h3>
                         <div class="counter">
-                          <button class="btn btn-light ">-</button>
-                          <span class="m-3" id="product-count">0</span>
+                          <button class="btn btn-light" onclick="hasah(this)" >-</button>
+                          <span class="m-3" id="product-count">${product.count}</span>
                           <button class="btn btn-light" onclick="countAdd(this)">+</button>
                         </div>
                       </div>
-                    </div>
-                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas-body" aria-label="Close" onclick="deleteCart(this)"  ></button>
-                    <div class=" mt-2 d-flex justify-content-between">
-                       <p>Total price</p>
-                       <span>$</span>
-                    </div>
-
+                      </div>
+                      <button type="button" class="btn-close ms-auto col-1" data-bs-dismiss="offcanvas-body" aria-label="Close" onclick="deleteCart(this)"  ></button>
                   </div>
                 </div>
-              </div>`
+    </div>`
     cartList.innerHTML += cartItem;
-
   }
   )
+  const totalCartPrice = calculateCartPrice();
+  cartPrice.innerText = `$${totalCartPrice}`;
 };
 
 const deleteCart =(e) =>{
@@ -105,21 +105,64 @@ const deleteCart =(e) =>{
   
 };
 
-const cart = (product) => {
-  console.log('cart', product);
-  cartProduct.push(allProducts[product]);
-  counter.innerText = cartProduct.length
-  displayCart();
-  // console.log(cartProduct);
-};
-// let haha = document.getElementById("product-count")
-let count = 0;
-const countAdd =(e) =>{
-  count++;
-  e.parentNode.children[1].textContent = count
-}
-// const count =(e) =>{
-//   count++;
-//   e.parentNode.children[1].textContent = count
-// }
+// const cart = (product) => {
+//   console.log('cart', product);
+//   cartProduct.push(allProducts[product]);
+//   counter.innerText = cartProduct.length
+//   displayCart();
+//   // console.log(cartProduct);
+// };
 
+const displayCategory = () =>{
+  categorys.innerHTML = "";
+  allCategorys.forEach((category) =>{
+    const categoryItem =  `<li><button onClick="getCategoryProduct('${category}')" class="dropdown-item" >${category} </button></li> `
+    categorys.innerHTML += categoryItem;
+  })
+};
+
+const getCategorys = async() =>{
+  const x = await fetch('https://dummyjson.com/products/categories');
+  const data = await x.json();
+  allCategorys = data;
+  displayCategory();
+  // console.log(allCategorys);
+}
+getCategorys();
+
+const getCategoryProduct = async (category) => {
+  console.log(category);
+  const response = await fetch( `https://dummyjson.com/products/category/${category}`);
+  const data = await response.json();
+  allProducts = data.products;
+  displayProduct();
+};
+
+const cart = (productId) => {
+  console.log(cartProduct);
+  const findIdx = cartProduct.findIndex((item) => item.id === productId);
+  if (findIdx > -1) {
+    //ene baraa cartProducts array dotor bval nemehgui harin baraanii too hemjee nemne
+    cartProduct[findIdx].count += 1;
+  } else {
+    //bhgui bol baraag nemne
+    const findIndex = allProducts.findIndex((item) => item.id === productId);
+
+    const newBaraa = { count: 1, ...allProducts[findIndex] };
+    cartProduct.push(newBaraa);
+  }
+  counter.innerText = cartProduct.length;
+  displayCart();
+};
+
+
+const calculateCartPrice = () => {
+  let sumPrice = 0;
+  for (product of cartProduct) {
+    sumPrice = sumPrice + product.price * product.count;
+  }
+  return sumPrice;
+};
+ let countAdd=(e) =>{
+  // e.parentNode.children[1].
+ }

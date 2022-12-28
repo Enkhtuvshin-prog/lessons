@@ -30,12 +30,12 @@
         </button> -->
       </div>
       <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
-        <form class="d-flex bg-secondary-subtle rounded-2 w-50" role="search ">
-          <span class="input-group-text border-0 bg-transparent" id="basic-addon1">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </span>
-          <input class="form-control me-2 border-0 bg-transparent" type="search" placeholder="Search" aria-label="Search">
-        </form>
+      <form class="d-flex bg-secondary-subtle rounded-2 w-50" role="search ">
+        <span class="input-group-text border-0 bg-transparent" id="basic-addon1">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <input class="form-control me-2 border-0 bg-transparent" type="search" placeholder="Search" aria-label="Search">
+      </form>
       <!-- </div> -->
       <div class="buttons me-3">
         <button class=" btn navbar-toggler p-2 position-relative" type="button" data-bs-toggle="offcanvas"
@@ -51,7 +51,16 @@
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Сагс</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div class="cartList" >
+          <div class="cartList">
+          </div>
+          <div class="modal-footer">
+            <div
+              class="d-flex justify-content-between p-2 mb-2"
+              style="background-color: #e1f5fe"
+            >
+              <h5 class="fw-bold mb-0 me-1">Total:</h5>
+              <h5 class="fw-bold mb-0 cartPrice "></h5>
+            </div>
           </div>
         </div>
         <button class="btn btn-outline-primary">Sign in</button>
@@ -61,8 +70,14 @@
 
   <div class="banner">
     <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
-      <a class="navbar-brand" href="#">Category</a>
       <ul class="nav nav-pills">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">Category</a>
+          <ul class="dropdown-menu" id="categorys">
+          </ul>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="#scrollspyHeading1">smartphones</a>
         </li>
@@ -78,19 +93,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#scrollspyHeading2">skincare</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
-            <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
-          </ul>
-        </li>
       </ul>
     </nav>
 
-    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+
+
+    <!-- <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
       <div class="carousel-inner">
         <div class="carousel-item active ">
           <img src="./img/ny-banner-large.jpeg" class="d-block w-100" alt="..."  >
@@ -114,15 +122,14 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
+    </div> -->
   </div>
 
   <div class="container bg-danger-subtle mt-0">
     <div class="row  g-4 m-2  productList">
     </div>
-  </div>
 
-  <script src="./product.js"></script>
+    <script src="./product.js"></script>
 
 </body>
 
