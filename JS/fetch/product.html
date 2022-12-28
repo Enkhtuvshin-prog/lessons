@@ -1,66 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <nav class="navbar ">
+  <nav class="navbar  bg-primary-subtle ">
     <div class="container-fluid justify-content-between ">
       <div class="nav-brand">
         <img src="./img/Logo BG.jpg" alt="">
         <a class="navbar-brand">E-commerce</a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
       </div>
-      <form class="d-flex bg-secondary-subtle rounded-2 w-50" role="search ">
-        <span class="input-group-text border-0 bg-transparent" id="basic-addon1">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </span>
-        <input class="form-control me-2 border-0 bg-transparent" type="search" placeholder="Search" aria-label="Search">
-      </form>
+      <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+        <form class="d-flex bg-secondary-subtle rounded-2 w-50" role="search ">
+          <span class="input-group-text border-0 bg-transparent" id="basic-addon1">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input class="form-control me-2 border-0 bg-transparent" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      <!-- </div> -->
       <div class="buttons me-3">
-        <button class=" btn navbar-toggler p-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <button class=" btn navbar-toggler p-2 position-relative" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span><i class="fa-solid fa-cart-shopping"></i></span>
-          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-light border border-danger rounded-circle cartCounter">
+          <span
+            class="position-absolute top-0 start-100 translate-middle p-2 bg-light border border-danger rounded-circle cartCounter">
             <span class="visually-hidden">New alerts</span>
         </button>
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Сагс</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"  ></button>
-              </div>
-              <div class="cartList">
-                
-              </div>
-              
-              <!-- <hr>
-              <div class="footer">
-                <div class="total-price m-3 d-flex justify-content-between">
-                  <p>Total price</p>
-                  <h3>$</h3>
-                </div>
-              </div> -->
-            </div>
-
-
-        <button class="btn btn-outline-primary" >Sign in</button>
-        <!-- <button class="btn btn-outline-primary" >My cart</button> -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header ">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Сагс</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="cartList" >
+          </div>
+        </div>
+        <button class="btn btn-outline-primary">Sign in</button>
       </div>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="row  g-4 m-3 productList">
+  <div class="banner">
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+      <a class="navbar-brand" href="#">Category</a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading1">smartphones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">entertainment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">laptops</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">fragrances</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">skincare</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+            <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active ">
+          <img src="./img/ny-banner-large.jpeg" class="d-block w-100" alt="..."  >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Happy new year</h5>
+          </div>
+        </div>
+        <div class="carousel-item" >
+          <img src="./img/iphone-14-pro_overview__e414c54gtu6a_og.png" class="d-block w-100 h-25" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>iPhone 14</h5>
+          </div>
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="container bg-danger-subtle mt-0">
+    <div class="row  g-4 m-2  productList">
     </div>
   </div>
 
   <script src="./product.js"></script>
 
 </body>
+
 </html>

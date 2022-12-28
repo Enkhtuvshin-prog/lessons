@@ -64,11 +64,11 @@ const displayCart = () => {
   cartList.innerHTML = "";
   cartProduct.forEach((product) => {
     const cartItem = `
-    <div class="offcanvas-body">
-                <div class="card mb-3" style="max-width: 540px;" >
+    <div class="offcanvas-body" >
+                <div class="card mb-3" style="max-width: 540px; height:150px " >
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="${product.thumbnail}" alt="..." style="max-width: 120px; height: 210px" >
+                      <img src="${product.thumbnail}" alt="..." style="max-width: 80px; height: 150px" >
                     </div>
                     <div class="col-md-6">
                       <div class="card-body">
@@ -79,14 +79,14 @@ const displayCart = () => {
                           <span class="m-3" id="product-count">0</span>
                           <button class="btn btn-light" onclick="countAdd(this)">+</button>
                         </div>
-                        <hr>
-                        <div class=" mt-2 d-flex justify-content-between">
-                          <p>Total price</p>
-                          <span>$</span>
-                        </div>
                       </div>
                     </div>
                     <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas-body" aria-label="Close" onclick="deleteCart(this)"  ></button>
+                    <div class=" mt-2 d-flex justify-content-between">
+                       <p>Total price</p>
+                       <span>$</span>
+                    </div>
+
                   </div>
                 </div>
               </div>`
@@ -117,7 +117,9 @@ let count = 0;
 const countAdd =(e) =>{
   count++;
   e.parentNode.children[1].textContent = count
-  // haha.textContent = count;
-  
 }
+// const count =(e) =>{
+//   count++;
+//   e.parentNode.children[1].textContent = count
+// }
 
