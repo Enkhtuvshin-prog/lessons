@@ -2,7 +2,9 @@ console.log('product');
 const productList = document.querySelector('.productList');
 const cartList = document.querySelector('.cartList');
 const counter = document.querySelector('.cartCounter');
+// const categorys = document.querySelector('.categorys')
 const categorys =document.getElementById('categorys');
+console.log(categorys);
 const cartPrice = document.querySelector('.cartPrice');
 console.log(cartPrice);
 let allProducts = [];
