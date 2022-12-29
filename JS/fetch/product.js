@@ -15,11 +15,11 @@ const displayProduct = () => {
     const item =
       `
  <div class="col-12 col-md-6 col-xl-3 ">
-    <div class="card h-100">
-      <img src="${product.thumbnail}" class="card-img-top h-50" alt="...">
+    <div class="card h-100" style="max-height: 400px">
+      <img src="${product.thumbnail}" class="card-img-top" alt="..." style="max-height: 180px">
       <div class="card-body">
         <h5 class="card-title text-center">${product.title}</h5>
-        <div class="badge bg-success-subtle  ms-auto" style="width: 6rem; color:green;">
+        <div class="badge bg-success-subtle  ms-auto" style="width: 4rem; color:green;">
           ${product.discountPercentage}OFF.
         </div>
         <div class="text">
@@ -69,10 +69,10 @@ const displayCart = () => {
   cartProduct.forEach((product) => {
     const cartItem = `
     <div class="offcanvas-body" >
-                <div class="card mb-3" style="max-width: 540px; height:150px " >
+                <div class="card mb-3" style="max-width: 450px; height:150px " >
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="${product.thumbnail}" alt="..." style="max-width: 80px; height: 150px" >
+                      <img src="${product.thumbnail}" alt="..." style="max-width: 120px; height: 150px" >
                     </div>
                     <div class="col-md-7">
                       <div class="card-body">
@@ -81,7 +81,7 @@ const displayCart = () => {
                         <div class="counter">
                           <button class="btn btn-light" onclick="hasah(this)" >-</button>
                           <span class="m-3" id="product-count">${product.count}</span>
-                          <button class="btn btn-light" onclick="countAdd(this)">+</button>
+                          <button class="btn btn-light" onclick="countAdd()">+</button>
                         </div>
                       </div>
                       </div>
@@ -102,7 +102,6 @@ const deleteCart =(e) =>{
   parent.removeChild(child);
   cartProduct.length--;
   counter.innerText=cartProduct.length;
-  
 };
 
 // const cart = (product) => {
@@ -154,6 +153,7 @@ const cart = (productId) => {
   counter.innerText = cartProduct.length;
   displayCart();
 };
+// console.log(cartProduct);
 
 
 const calculateCartPrice = () => {
@@ -163,6 +163,5 @@ const calculateCartPrice = () => {
   }
   return sumPrice;
 };
- let countAdd=(e) =>{
-  // e.parentNode.children[1].
- }
+ 
+// counter add
