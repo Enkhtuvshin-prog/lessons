@@ -1,12 +1,13 @@
+
 console.log('product');
 const productList = document.querySelector('.productList');
 const cartList = document.querySelector('.cartList');
 const counter = document.querySelector('.cartCounter');
 // const categorys = document.querySelector('.categorys')
 const categorys =document.getElementById('categorys');
-console.log(categorys);
+// console.log(categorys);
 const cartPrice = document.querySelector('.cartPrice');
-console.log(cartPrice);
+// console.log(cartPrice);
 let allProducts = [];
 let cartProduct = [];
 let allCategorys = [];
@@ -16,7 +17,7 @@ const displayProduct = () => {
   allProducts.forEach((product, idx) => {
     const item =
       `
- <div class="col-12 col-md-6 col-xl-3 ">
+ <div class="col-12 col-md-6 col-xl-3">
     <div class="card h-100" style="max-height: 400px">
       <img src="${product.thumbnail}" class="card-img-top" alt="..." style="max-height: 180px">
       <div class="card-body">
@@ -83,8 +84,8 @@ const displayCart = () => {
                         <div class="counter">
                           <button class="btn btn-light" onclick="hasah(this)" >-</button>
                           <span class="m-3" id="product-count">${product.count}</span>
-                          <button class="btn btn-light" onclick="countAdd()">+</button>
-                        </div>
+                          <button class="btn btn-light" onclick="countAdd(${product.id})">+</button>
+                        </div>                        
                       </div>
                       </div>
                       <button type="button" class="btn-close ms-auto col-1" data-bs-dismiss="offcanvas-body" aria-label="Close" onclick="deleteCart(this)"  ></button>
@@ -132,7 +133,7 @@ const getCategorys = async() =>{
 getCategorys();
 
 const getCategoryProduct = async (category) => {
-  console.log(category);
+  // console.log(category);
   const response = await fetch( `https://dummyjson.com/products/category/${category}`);
   const data = await response.json();
   allProducts = data.products;
@@ -140,7 +141,7 @@ const getCategoryProduct = async (category) => {
 };
 
 const cart = (productId) => {
-  console.log(cartProduct);
+  // console.log(cartProduct);
   const findIdx = cartProduct.findIndex((item) => item.id === productId);
   if (findIdx > -1) {
     //ene baraa cartProducts array dotor bval nemehgui harin baraanii too hemjee nemne
@@ -155,7 +156,6 @@ const cart = (productId) => {
   counter.innerText = cartProduct.length;
   displayCart();
 };
-// console.log(cartProduct);
 
 
 const calculateCartPrice = () => {
@@ -167,3 +167,16 @@ const calculateCartPrice = () => {
 };
  
 // counter add
+let countAdd = (cartId) =>{
+let c = cartProduct[cartId-1].count
+if(c>=0){
+  c+=1;
+  displayCart();
+}
+
+  console.log('x', cartProduct);
+  console.log('k',cartId);
+  console.log('c', c);
+};
+countAdd();
+//pagination
