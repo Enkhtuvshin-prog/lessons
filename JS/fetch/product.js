@@ -82,7 +82,7 @@ const displayCart = () => {
                         <h5 class="card-title">${product.title} <title></title></h5>
                         <h3>$${product.price}</h3>
                         <div class="counter">
-                          <button class="btn btn-light" onclick="hasah(this)" >-</button>
+                          <button class="btn btn-light" onclick="hasah(${product.id})" >-</button>
                           <span class="m-3" id="product-count">${product.count}</span>
                           <button class="btn btn-light" onclick="countAdd(${product.id})">+</button>
                         </div>                        
@@ -168,15 +168,15 @@ const calculateCartPrice = () => {
  
 // counter add
 let countAdd = (cartId) =>{
-let c = cartProduct[cartId-1].count
-if(c>=0){
-  c+=1;
-  displayCart();
-}
-
-  console.log('x', cartProduct);
-  console.log('k',cartId);
-  console.log('c', c);
+let index = cartProduct.map(e => e.id).indexOf(cartId);
+if(index>=0) cartProduct[index].count++;
+displayCart();
 };
-countAdd();
+let hasah = (cartId) =>{
+let index = cartProduct.map(e => e.id).indexOf(cartId);
+if(index>=0) cartProduct[index].count--;
+displayCart();
+};
+
+
 //pagination
